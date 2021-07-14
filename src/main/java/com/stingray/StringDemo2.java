@@ -17,7 +17,7 @@ public class StringDemo2 {
 	static Logger log = LoggerFactory.getLogger(StringDemo2.class);
 
 	public static void main(String[] args) {
-		// go2();
+		// go2(); 
 
 		log.debug("String is palindrom :: " + checkTheInputStringIsPalidrom("SANDNAS"));
 	}
