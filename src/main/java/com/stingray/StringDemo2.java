@@ -59,7 +59,7 @@ public class StringDemo2 {
 
 	/**
 	 * 
-	 * @param string
+	 * @param string a PALINDROM or not
 	 */
 	static boolean checkTheInputStringIsPalidrom(String string) {
 		boolean flag = true;
