@@ -18,19 +18,19 @@ public class StringDemo1 {
 	 * now compare the two string without using equls method
 	 */	
 	static void go() {
-		//String string1 = "hello worlds I am sandeep";
+		String string1 = "hello worlds I am sandeep";
 		//check the first occranc of the h in the above String
-		//System.out.println( string1.indexOf("s"));  //index of fetch the first occurance 
-		//System.out.println( string1.indexOf("worlds"));  //index of fetch the first occurance 		
-		//System.out.println( string1.lastIndexOf("s"));  //last index of fetch the first occurance 		
+		System.out.println( string1.indexOf("s"));  //index of fetch the first occurance 
+		System.out.println( string1.indexOf("worlds"));  //index of fetch the first occurance 		
+		System.out.println( string1.lastIndexOf("s"));  //last index of fetch the first occurance 		
 
-		/*int length =  string1.length();
+		int length =  string1.length();
 		for(int i=0;i<length;i++) {
 			System.out.println(string1.charAt(i));
-		}*/
+		}
 	
 		//we can also comapare the character using the arithmetic operation.
-		String s1 = "hello";
+		/*String s1 = "hello";
 		String s2 = "hello";
 		int length; 
 		if(s1.length()<s2.length())
@@ -50,7 +50,7 @@ public class StringDemo1 {
 				break;
 		}
 		
-		System.out.println("string are equals "+ flag);
+		System.out.println("string are equals "+ flag);*/
 		
 	
 	}
