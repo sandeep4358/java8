@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 	Input : 000012356090
 	Output : 12356090
- */
+ */ 
 public class StringDemo2 {
 	static Logger log = LoggerFactory.getLogger(StringDemo2.class);
 
