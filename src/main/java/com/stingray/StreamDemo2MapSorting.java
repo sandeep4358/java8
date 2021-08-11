@@ -2,6 +2,7 @@ package com.stingray;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -33,7 +34,7 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 public class StreamDemo2MapSorting {
 
 	public static void main(String[] args) throws ParseException {
-		sortingPractice28072021();
+		sortingDublicacyPractice28072021();
 	}
 
 	static void sortEmployeeWithEmployeeName() throws ParseException {
@@ -51,7 +52,30 @@ public class StreamDemo2MapSorting {
 		//1. implement comparable interface and assigned it to tree set.
 		
 	}
+	/**
+	 * sorting and duplicacy remove without using the collection api
+	 * @throws ParseException
+	 */
+	static void sortingDublicacyPractice28072021() throws ParseException {
+		List<Employee> allEmployee = EmployeeDao.getAllEmployee();		
+		
+		System.out.println(allEmployee.size());
+	}
 	
+	static void compareComparatorPractice28072021() throws ParseException {
+		List<Employee> allEmployee = EmployeeDao.getAllEmployee();
+		/*Collections.sort(allEmployee,(a,b)->a.getEmpName().compareTo(b.getEmpName()));
+		allEmployee.stream().map((t)->t.getEmpName()).collect(Collectors.toList()).forEach(System.out::println);
+		*/
+		/*TreeSet<Employee> e = new TreeSet<Employee>((a,b)->a.getEmpName().compareTo(b.getEmpName()));
+		//e.add(null);
+		e.addAll(allEmployee);
+		e.stream().flatMap(s->Stream.of(s.getEmpName())).collect(Collectors.toList()).forEach(System.out::println);*/
+		
+		allEmployee.sort((a,b)->a.getEmpName().compareTo(b.getEmpName()));
+		allEmployee.forEach(a->System.out.println(a.getEmpName()));
+		
+	}
 	//Sorting an employee on the basis of employee name
 	//Find out all the grade a employee and find there average salary.
 	static void sortingPractice28072021() throws ParseException {
