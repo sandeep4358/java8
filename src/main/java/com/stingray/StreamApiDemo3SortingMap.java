@@ -1,9 +1,12 @@
 package com.stingray;
 
 import java.text.ParseException;
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import com.stingray.dataSoruce.Employee;
 import com.stingray.dataSoruce.EmployeeDao;
@@ -22,22 +25,27 @@ public class StreamApiDemo3SortingMap {
 		map1.put("ererr", 22);
 		map1.put("aoioo", 1);
 		
+		
+		  List<Entry<String, Integer>> list = new
+		  ArrayList<Map.Entry<String,Integer>>(map1.entrySet()); Collections.sort(list,(e1,e2)->e1.getKey().compareTo(e2.getKey()));
+		  list.stream().forEach(e->System.out.println(e.getKey()+" "+e.getValue()));
+		 
+		
 		/*
-		 * List<Entry<String, Integer>> list = new
-		 * ArrayList<Map.Entry<String,Integer>>(map1.entrySet()); Collections.sort(list,
-		 * (e1,e2)->e1.getKey().compareTo(e2.getKey()));
-		 * list.stream().forEach(e->System.out.println(e.getKey()+" "+e.getValue()));
+		 * map1.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.
+		 * out::println); System.out.println(
+		 * "--------------------------------------------------------------------");
+		 * map1.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.
+		 * out::println);
+		 * 
+		 * Map<Employee, Integer> allEmployeeMap = EmployeeDao.getAllEmployeeMap(new
+		 * HashMap<>());
+		 * 
+		 * allEmployeeMap.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator
+		 * .comparing(Employee::getEmpName).reversed())).forEach(e->System.out.println(e
+		 * .getKey()+" :: "+e.getValue()));;
+		 * 
 		 */
-		
-		map1.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
-		System.out.println("--------------------------------------------------------------------");
-		map1.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
-		
-		Map<Employee, Integer> allEmployeeMap = EmployeeDao.getAllEmployeeMap(new HashMap<>());
-		
-		allEmployeeMap.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getEmpName).reversed())).forEach(e->System.out.println(e.getKey()+" :: "+e.getValue()));;
-
-		
 		
 		
 //map1.entrySet().stream().sorted().forEach(e->System.out.println(e.getValue()+" "+e.getKey()));
