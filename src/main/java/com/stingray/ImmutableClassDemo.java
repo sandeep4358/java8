@@ -37,7 +37,6 @@ final class immutable {
 		this.desc = desc;
 		Map<String, String> temp = new HashMap<String, String>();
 		map.entrySet().stream().forEach((e) -> temp.put(e.getKey(), e.getValue()));
-
 		this.map = temp;
 	}
 
@@ -51,7 +50,7 @@ final class immutable {
 
 	public Map<String, String> getMetaData() {
 		Map<String, String> temp = new HashMap<String, String>();
-		temp.entrySet().stream().forEach((e) -> map.put(e.getKey(), e.getValue()));
+		map.entrySet().stream().forEach((e) -> temp.put(e.getKey(), e.getValue()));
 		return temp;
 	}
 
