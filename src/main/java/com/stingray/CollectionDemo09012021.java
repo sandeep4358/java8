@@ -16,11 +16,8 @@ public class CollectionDemo09012021 {
 
 		Thread t1 = new Thread(new Mythread(employeeMap), "t1");
 		t1.start();
-
-		
-		  Thread t2 = new Thread(new Mythread2(employeeMap), "t2"); t2.start();
-		 
-
+		Thread t2 = new Thread(new Mythread2(employeeMap), "t2");
+		t2.start();
 	}
 }
 
@@ -32,10 +29,10 @@ class Mythread implements Runnable {
 	}
 
 	public void run() {
-		System.out.println(Thread.currentThread().getName() + " run method executed");		
-	
+		System.out.println(Thread.currentThread().getName() + " run method executed");
+
 		Set<Employee> keySet = map.keySet();
-		keySet.stream().map(e->map.get(e)).forEach(System.out::println);		
+		keySet.stream().map(e -> map.get(e)).forEach(System.out::println);
 		/*
 		 * Set<Entry<Employee, Integer>> entrySet = map.entrySet();
 		 * 

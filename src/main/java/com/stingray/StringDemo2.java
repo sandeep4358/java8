@@ -19,7 +19,7 @@ public class StringDemo2 {
 	public static void main(String[] args) {
 		// go2();
 
-		log.debug("String is palindrom :: " + checkTheInputStringIsPalidrom("SANDNAS"));
+		//log.debug("String is palindrom :: " + checkTheInputStringIsPalidrom(xalk dkhu/"SANDNAS"));i;lk
 	}
 
 	static void go2() {
@@ -48,6 +48,7 @@ public class StringDemo2 {
 		if (num1 == num2) {
 			System.out.println("num1 == num2");
 		} else {
+	
 			System.out.println("num1 != num2");
 		}
 		if (num3 == num4) {
@@ -66,7 +67,8 @@ public class StringDemo2 {
 		int j = string.length() - 1;
 
 		for (int i = 0; i < string.length() / 2; i++) {
-			//System.out.println("i = "+i+" "+"j = "+j+" "+string.charAt(i) + " : " + string.charAt(j));
+			// System.out.println("i = "+i+" "+"j = "+j+" "+string.charAt(i) + " : " +
+			// string.charAt(j));
 			if (string.charAt(i) != string.charAt(j)) {
 				flag = false;
 				break;
