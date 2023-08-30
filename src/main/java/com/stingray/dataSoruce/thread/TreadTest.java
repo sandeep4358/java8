@@ -53,7 +53,7 @@ class Resource {
                 while (count < 10) {
                 count = ++count;
                 System.out.println(Thread.currentThread().getName() + " :: Number :: " + count);
-               this.notify();
+                this.notify();
                 this.wait();
             }
                 this.notifyAll();

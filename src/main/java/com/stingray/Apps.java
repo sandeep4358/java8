@@ -19,12 +19,8 @@ public class Apps {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		List<Employee> eList = null;
-		try {
 			eList = EmployeeDao.getAllEmployee();
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+
 		/**
 		 * Employee having salary greater than 200000 and Name start with some
 		 * characters. A
