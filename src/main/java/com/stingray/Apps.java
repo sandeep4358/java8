@@ -16,6 +16,8 @@ public class Apps {
 	private static Map<Integer, String> collect;
 	//private static List<Integer> asList;
 
+	
+	
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		List<Employee> eList = null;
