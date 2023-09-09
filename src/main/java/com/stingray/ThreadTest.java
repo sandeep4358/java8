@@ -77,8 +77,8 @@ class Resource {
 			}
 
 		}
-		
-		
+
+
 
 	}
 
