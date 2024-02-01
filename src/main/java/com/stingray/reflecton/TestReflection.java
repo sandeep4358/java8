@@ -9,6 +9,8 @@ import java.util.stream.Stream;
 public class TestReflection {
     public static void main(String[] args) throws ClassNotFoundException {
         Class<?> c = Class.forName("com.stingray.reflecton.Emp");
+            //Iterable
+
         Constructor<?>[] declaredConstructors = c.getDeclaredConstructors();
         Stream<Constructor<?>> stream = Arrays.stream(declaredConstructors);
         stream.forEach((ccon) ->{

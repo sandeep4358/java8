@@ -34,7 +34,7 @@ public class Java8_001 {
     }
 
     public static void main(String[] args) {
-        getTheEmployeeNameWithLongestString();
+        testStream();
 
 
     }
@@ -104,6 +104,18 @@ public class Java8_001 {
         Optional<Integer> integerOptional = integerList.stream().reduce((a, b) -> a + b);
         if (integerOptional.isPresent())
             System.out.println(integerOptional.get());
+    }
+
+
+    static void testStream(){
+        List<Employee> employeeList = EmployeeDao.getAllEmployee();
+
+      //  employeeList.stream().forEach(System.out::println);
+
+        Iterator<Employee> iterator = employeeList.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }
 
